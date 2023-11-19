@@ -12,7 +12,7 @@ zstyle :prompt:pure:git:stash show yes
 zstyle :prompt:pure:execution_time color "${palette.peach.hex}"
 zstyle :prompt:pure:path color "${palette.blue.hex}"
 
-zstyle :prompt:pure:prompt:continuation color "${palette.mauve.hex}"
+zstyle :prompt:pure:prompt:continuation color "${palette.subtext0.hex}"
 zstyle :prompt:pure:prompt:error color "${palette.red.hex}"
 zstyle :prompt:pure:prompt:success color "${palette.green.hex}"
 

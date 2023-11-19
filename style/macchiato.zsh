@@ -4,7 +4,7 @@ zstyle :prompt:pure:git:stash show yes
 zstyle :prompt:pure:execution_time color "#f5a97f"
 zstyle :prompt:pure:path color "#8aadf4"
 
-zstyle :prompt:pure:prompt:continuation color "#c6a0f6"
+zstyle :prompt:pure:prompt:continuation color "#a5adcb"
 zstyle :prompt:pure:prompt:error color "#ed8796"
 zstyle :prompt:pure:prompt:success color "#a6da95"
 

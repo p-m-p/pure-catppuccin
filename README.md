@@ -1,6 +1,8 @@
-# Nicer color choices for Pure
+# Pure Catppuccin
 
-My personal preference of colour choices in [Pure prompt](https://github.com/sindresorhus/pure) for ZSH.
+My personal preference of colour choices for [Pure](https://github.com/sindresorhus/pure) ZSH prompt.
+
+Requires a terminal with support for RGB colours like iTerm2.
 
 ## Installation
 
