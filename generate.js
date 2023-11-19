@@ -29,5 +29,5 @@ zstyle :prompt:pure:git:stash color "${palette.teal.hex}"
 
 for (let [variant, palette] of Object.entries(variants)) {
   await createTheme(variant, palette);
-  console.log(`${variant} created ✅`);
+  console.log(`✅ ${variant}`);
 }

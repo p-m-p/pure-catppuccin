@@ -1,5 +1,7 @@
 # Nicer color choices for Pure
 
+My personal preference of colour choices in [Pure prompt](https://github.com/sindresorhus/pure) for ZSH.
+
 ## Installation
 
 ```sh
