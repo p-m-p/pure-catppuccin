@@ -1,0 +1,19 @@
+{
+  "name": "pure-catppuccin",
+  "version": "1.0.0",
+  "description": "Catppuccin for Pure ZSH shell",
+  "type": "module",
+  "scripts": {
+    "generate": "node ./generate.js"
+  },
+  "keywords": [
+    "catppuccin",
+    "pure",
+    "zsh"
+  ],
+  "author": "Phil Parsons",
+  "license": "MIT",
+  "dependencies": {
+    "@catppuccin/palette": "^0.2.0"
+  }
+}
