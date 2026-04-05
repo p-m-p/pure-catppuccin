@@ -1,9 +1,8 @@
 import { writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import { fileURLToPath } from "node:url";
 import { flavorEntries } from "@catppuccin/palette";
 
-const styleDir = resolve(fileURLToPath(import.meta.url), "..", "style");
+const styleDir = resolve(import.meta.dirname, "style");
 
 async function createTheme(flavor, colors) {
   await writeFile(
