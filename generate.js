@@ -18,7 +18,7 @@ zstyle :prompt:pure:prompt:continuation color "${colors.overlay1.hex}"
 zstyle :prompt:pure:prompt:error color "${colors.red.hex}"
 zstyle :prompt:pure:prompt:success color "${colors.green.hex}"
 
-zstyle :prompt:pure:git:action color "${colors.rosewater.hex}"
+zstyle :prompt:pure:git:action color "${colors.yellow.hex}"
 zstyle :prompt:pure:git:arrow color "${colors.sapphire.hex}"
 zstyle :prompt:pure:git:branch color "${colors.teal.hex}"
 zstyle :prompt:pure:git:branch:cached color "${colors.red.hex}"

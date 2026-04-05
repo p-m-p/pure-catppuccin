@@ -28,7 +28,7 @@ function createSvg(flavorName, colors) {
 
   <!-- prompt 1: full git status + success -->
   <text y="${line1Y}" font-family="Hack Nerd Font Mono, monospace" font-size="${fontSize}">
-    <tspan x="${paddingX}" fill="${colors.blue.hex}">~/dev/pure-catppuccin</tspan><tspan fill="${colors.teal.hex}"> main</tspan><tspan fill="${colors.rosewater.hex}"> rebase</tspan><tspan fill="${colors.sapphire.hex}"> ⇡</tspan><tspan fill="${colors.yellow.hex}"> *</tspan><tspan fill="${colors.overlay1.hex}"> ≡</tspan>
+    <tspan x="${paddingX}" fill="${colors.blue.hex}">~/dev/pure-catppuccin</tspan><tspan fill="${colors.teal.hex}"> main</tspan><tspan fill="${colors.yellow.hex}"> rebase</tspan><tspan fill="${colors.sapphire.hex}"> ⇡</tspan><tspan fill="${colors.yellow.hex}"> *</tspan><tspan fill="${colors.overlay1.hex}"> ≡</tspan>
   </text>
   <text x="${width - paddingX}" y="${line1Y}" text-anchor="end" font-family="Hack Nerd Font Mono, monospace" font-size="${fontSize}" fill="${colors.peach.hex}">5s</text>
   <text x="${paddingX}" y="${line2Y}" font-family="Hack Nerd Font Mono, monospace" font-size="${fontSize}" fill="${colors.green.hex}">❯</text>

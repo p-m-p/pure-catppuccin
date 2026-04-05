@@ -8,7 +8,7 @@ zstyle :prompt:pure:prompt:continuation color "#838ba7"
 zstyle :prompt:pure:prompt:error color "#e78284"
 zstyle :prompt:pure:prompt:success color "#a6d189"
 
-zstyle :prompt:pure:git:action color "#f2d5cf"
+zstyle :prompt:pure:git:action color "#e5c890"
 zstyle :prompt:pure:git:arrow color "#85c1dc"
 zstyle :prompt:pure:git:branch color "#81c8be"
 zstyle :prompt:pure:git:branch:cached color "#e78284"
