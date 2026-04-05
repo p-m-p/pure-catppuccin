@@ -6,7 +6,7 @@ const imgDir = path.join(import.meta.dirname, "img");
 
 function createSvg(flavorName, colors) {
   const width = 520;
-  const height = 196;
+  const height = 172;
   const titleBarHeight = 36;
   const paddingX = 24;
   const fontSize = 14;
@@ -14,9 +14,8 @@ function createSvg(flavorName, colors) {
 
   const line1Y = titleBarHeight + 24 + fontSize;
   const line2Y = line1Y + lineHeight;
-  const line3Y = line2Y + lineHeight;
-  const line4Y = line3Y + lineHeight + 8;
-  const line5Y = line4Y + lineHeight;
+  const line3Y = line2Y + lineHeight + 8;
+  const line4Y = line3Y + lineHeight;
 
   return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
   <rect width="${width}" height="${height}" rx="8" fill="${colors.base.hex}"/>
@@ -34,16 +33,11 @@ function createSvg(flavorName, colors) {
   <text x="${width - paddingX}" y="${line1Y}" text-anchor="end" font-family="Hack Nerd Font Mono, monospace" font-size="${fontSize}" fill="${colors.peach.hex}">5s</text>
   <text x="${paddingX}" y="${line2Y}" font-family="Hack Nerd Font Mono, monospace" font-size="${fontSize}" fill="${colors.green.hex}">❯</text>
 
-  <!-- continuation prompt -->
-  <text y="${line3Y}" font-family="Hack Nerd Font Mono, monospace" font-size="${fontSize}">
-    <tspan x="${paddingX}" fill="${colors.surface2.hex}">·</tspan><tspan fill="${colors.text.hex}"> git commit -m </tspan><tspan fill="${colors.green.hex}">'feat: add feature'</tspan>
-  </text>
-
   <!-- prompt 2: error state -->
-  <text y="${line4Y}" font-family="Hack Nerd Font Mono, monospace" font-size="${fontSize}">
+  <text y="${line3Y}" font-family="Hack Nerd Font Mono, monospace" font-size="${fontSize}">
     <tspan x="${paddingX}" fill="${colors.blue.hex}">~/dev/pure-catppuccin</tspan><tspan fill="${colors.mauve.hex}"> main</tspan>
   </text>
-  <text x="${paddingX}" y="${line5Y}" font-family="Hack Nerd Font Mono, monospace" font-size="${fontSize}" fill="${colors.red.hex}">❯</text>
+  <text x="${paddingX}" y="${line4Y}" font-family="Hack Nerd Font Mono, monospace" font-size="${fontSize}" fill="${colors.red.hex}">❯</text>
 </svg>`;
 }
 
