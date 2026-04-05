@@ -20,7 +20,7 @@ zstyle :prompt:pure:prompt:success color "${colors.green.hex}"
 
 zstyle :prompt:pure:git:action color "${colors.yellow.hex}"
 zstyle :prompt:pure:git:arrow color "${colors.sapphire.hex}"
-zstyle :prompt:pure:git:branch color "${colors.teal.hex}"
+zstyle :prompt:pure:git:branch color "${colors.mauve.hex}"
 zstyle :prompt:pure:git:branch:cached color "${colors.red.hex}"
 zstyle :prompt:pure:git:dirty color "${colors.yellow.hex}"
 zstyle :prompt:pure:git:stash color "${colors.overlay1.hex}"

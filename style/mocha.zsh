@@ -10,7 +10,7 @@ zstyle :prompt:pure:prompt:success color "#a6e3a1"
 
 zstyle :prompt:pure:git:action color "#f9e2af"
 zstyle :prompt:pure:git:arrow color "#74c7ec"
-zstyle :prompt:pure:git:branch color "#94e2d5"
+zstyle :prompt:pure:git:branch color "#cba6f7"
 zstyle :prompt:pure:git:branch:cached color "#f38ba8"
 zstyle :prompt:pure:git:dirty color "#f9e2af"
 zstyle :prompt:pure:git:stash color "#7f849c"
