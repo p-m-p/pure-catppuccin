@@ -4,7 +4,8 @@
   "description": "Catppuccin for Pure ZSH shell",
   "type": "module",
   "scripts": {
-    "generate": "node ./generate.js"
+    "generate": "node ./generate.js",
+    "preview": "node ./preview.js"
   },
   "keywords": [
     "catppuccin",
