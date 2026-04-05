@@ -5,14 +5,18 @@ import { flavorEntries } from "@catppuccin/palette";
 const imgDir = path.join(import.meta.dirname, "img");
 
 function createSvg(flavorName, colors) {
-  const width = 480;
-  const height = 120;
+  const width = 520;
+  const height = 196;
   const titleBarHeight = 36;
   const paddingX = 24;
   const fontSize = 14;
   const lineHeight = 24;
-  const line1Y = titleBarHeight + 22 + fontSize;
+
+  const line1Y = titleBarHeight + 24 + fontSize;
   const line2Y = line1Y + lineHeight;
+  const line3Y = line2Y + lineHeight;
+  const line4Y = line3Y + lineHeight + 8;
+  const line5Y = line4Y + lineHeight;
 
   return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
   <rect width="${width}" height="${height}" rx="8" fill="${colors.base.hex}"/>
@@ -22,10 +26,24 @@ function createSvg(flavorName, colors) {
   <circle cx="40" cy="18" r="6" fill="${colors.yellow.hex}"/>
   <circle cx="60" cy="18" r="6" fill="${colors.green.hex}"/>
   <text x="${width / 2}" y="23" font-family="Hack Nerd Font Mono, monospace" font-size="12" fill="${colors.subtext0.hex}" text-anchor="middle">${flavorName}</text>
-  <text x="${paddingX}" y="${line1Y}" font-family="Hack Nerd Font Mono, monospace" font-size="${fontSize}">
-    <tspan fill="${colors.blue.hex}">~/dev/pure-catppuccin</tspan><tspan fill="${colors.mauve.hex}"> main</tspan>
+
+  <!-- prompt 1: full git status + success -->
+  <text y="${line1Y}" font-family="Hack Nerd Font Mono, monospace" font-size="${fontSize}">
+    <tspan x="${paddingX}" fill="${colors.blue.hex}">~/dev/pure-catppuccin</tspan><tspan fill="${colors.mauve.hex}"> main</tspan><tspan fill="${colors.rosewater.hex}"> rebase</tspan><tspan fill="${colors.sapphire.hex}"> ⇡</tspan><tspan fill="${colors.yellow.hex}"> *</tspan><tspan fill="${colors.surface2.hex}"> ≡</tspan>
   </text>
+  <text x="${width - paddingX}" y="${line1Y}" text-anchor="end" font-family="Hack Nerd Font Mono, monospace" font-size="${fontSize}" fill="${colors.peach.hex}">5s</text>
   <text x="${paddingX}" y="${line2Y}" font-family="Hack Nerd Font Mono, monospace" font-size="${fontSize}" fill="${colors.green.hex}">❯</text>
+
+  <!-- continuation prompt -->
+  <text y="${line3Y}" font-family="Hack Nerd Font Mono, monospace" font-size="${fontSize}">
+    <tspan x="${paddingX}" fill="${colors.surface2.hex}">·</tspan><tspan fill="${colors.text.hex}"> git commit -m </tspan><tspan fill="${colors.green.hex}">'feat: add feature'</tspan>
+  </text>
+
+  <!-- prompt 2: error state -->
+  <text y="${line4Y}" font-family="Hack Nerd Font Mono, monospace" font-size="${fontSize}">
+    <tspan x="${paddingX}" fill="${colors.blue.hex}">~/dev/pure-catppuccin</tspan><tspan fill="${colors.mauve.hex}"> main</tspan>
+  </text>
+  <text x="${paddingX}" y="${line5Y}" font-family="Hack Nerd Font Mono, monospace" font-size="${fontSize}" fill="${colors.red.hex}">❯</text>
 </svg>`;
 }
 
