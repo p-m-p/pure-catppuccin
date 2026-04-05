@@ -1,10 +1,13 @@
-import { writeFile } from "fs/promises";
-import { resolve } from "path";
+import { writeFile } from "node:fs/promises";
+import { resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { flavorEntries } from "@catppuccin/palette";
+
+const styleDir = resolve(fileURLToPath(import.meta.url), "..", "style");
 
 async function createTheme(flavor, colors) {
   await writeFile(
-    resolve("style", `${flavor}.zsh`),
+    resolve(styleDir, `${flavor}.zsh`),
     `\
 # Show the stash status icon
 zstyle :prompt:pure:git:stash show yes
@@ -23,11 +26,12 @@ zstyle :prompt:pure:git:branch:cached color "${colors.red.hex}"
 zstyle :prompt:pure:git:dirty color "${colors.yellow.hex}"
 zstyle :prompt:pure:git:stash color "${colors.surface2.hex}"
 `,
-    "utf8",
   );
 }
 
-for (const [flavor, { colors }] of flavorEntries) {
-  await createTheme(flavor, colors);
-  console.log(`✅ ${flavor}`);
-}
+await Promise.all(
+  flavorEntries.map(async ([flavor, { colors }]) => {
+    await createTheme(flavor, colors);
+    console.log(`✅ ${flavor}`);
+  }),
+);
