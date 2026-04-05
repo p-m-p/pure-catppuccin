@@ -4,8 +4,8 @@ import { flavorEntries } from "@catppuccin/palette";
 
 const styleDir = path.join(import.meta.dirname, "style");
 
-async function createTheme(flavor, colors) {
-  await fs.writeFile(
+function createTheme(flavor, colors) {
+  return fs.writeFile(
     path.join(styleDir, `${flavor}.zsh`),
     `\
 # Show the stash status icon
