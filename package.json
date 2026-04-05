@@ -14,6 +14,6 @@
   "author": "Phil Parsons",
   "license": "MIT",
   "dependencies": {
-    "@catppuccin/palette": "^0.2.0"
+    "@catppuccin/palette": "^1.8.0"
   }
 }

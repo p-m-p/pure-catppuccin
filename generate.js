@@ -1,33 +1,33 @@
 import { writeFile } from "fs/promises";
 import { resolve } from "path";
-import { variants } from "@catppuccin/palette";
+import { flavorEntries } from "@catppuccin/palette";
 
-async function createTheme(variant, palette) {
+async function createTheme(flavor, colors) {
   await writeFile(
-    resolve("style", `${variant}.zsh`),
+    resolve("style", `${flavor}.zsh`),
     `\
 # Show the stash status icon
 zstyle :prompt:pure:git:stash show yes
 
-zstyle :prompt:pure:execution_time color "${palette.peach.hex}"
-zstyle :prompt:pure:path color "${palette.blue.hex}"
+zstyle :prompt:pure:execution_time color "${colors.peach.hex}"
+zstyle :prompt:pure:path color "${colors.blue.hex}"
 
-zstyle :prompt:pure:prompt:continuation color "${palette.surface2.hex}"
-zstyle :prompt:pure:prompt:error color "${palette.red.hex}"
-zstyle :prompt:pure:prompt:success color "${palette.green.hex}"
+zstyle :prompt:pure:prompt:continuation color "${colors.surface2.hex}"
+zstyle :prompt:pure:prompt:error color "${colors.red.hex}"
+zstyle :prompt:pure:prompt:success color "${colors.green.hex}"
 
-zstyle :prompt:pure:git:action color "${palette.rosewater.hex}"
-zstyle :prompt:pure:git:arrow color "${palette.sapphire.hex}"
-zstyle :prompt:pure:git:branch color "${palette.mauve.hex}"
-zstyle :prompt:pure:git:branch:cached color "${palette.red.hex}"
-zstyle :prompt:pure:git:dirty color "${palette.yellow.hex}"
-zstyle :prompt:pure:git:stash color "${palette.surface2.hex}"
+zstyle :prompt:pure:git:action color "${colors.rosewater.hex}"
+zstyle :prompt:pure:git:arrow color "${colors.sapphire.hex}"
+zstyle :prompt:pure:git:branch color "${colors.mauve.hex}"
+zstyle :prompt:pure:git:branch:cached color "${colors.red.hex}"
+zstyle :prompt:pure:git:dirty color "${colors.yellow.hex}"
+zstyle :prompt:pure:git:stash color "${colors.surface2.hex}"
 `,
     "utf8",
   );
 }
 
-for (let [variant, palette] of Object.entries(variants)) {
-  await createTheme(variant, palette);
-  console.log(`✅ ${variant}`);
+for (const [flavor, { colors }] of flavorEntries) {
+  await createTheme(flavor, colors);
+  console.log(`✅ ${flavor}`);
 }
