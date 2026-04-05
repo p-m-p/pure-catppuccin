@@ -1,12 +1,11 @@
 import { writeFile } from "node:fs/promises";
-import { resolve } from "node:path";
 import { flavorEntries } from "@catppuccin/palette";
 
-const styleDir = resolve(import.meta.dirname, "style");
+const styleDir = `${import.meta.dirname}/style`;
 
 async function createTheme(flavor, colors) {
   await writeFile(
-    resolve(styleDir, `${flavor}.zsh`),
+    `${styleDir}/${flavor}.zsh`,
     `\
 # Show the stash status icon
 zstyle :prompt:pure:git:stash show yes
