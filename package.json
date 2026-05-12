@@ -12,7 +12,7 @@
     "pure",
     "zsh"
   ],
-  "packageManager": "pnpm@11.0.9",
+  "packageManager": "pnpm@11.1.1",
   "author": "Phil Parsons",
   "license": "MIT",
   "dependencies": {
